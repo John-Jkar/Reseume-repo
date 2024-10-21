@@ -1,0 +1,186 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Josefin Sans',sans-serif;
+    box-sizing: border-box;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../css/nasa-Q1p7bh3SHj8-unsplash.jpg);
+    background-size: cover;
+    background-position: centre;
+    image-rendering: auto;
+    
+    
+}
+nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top: 50px;
+    padding-left: 8%;
+    padding-right: 30%;
+}
+.logo{
+    color: white;
+    font-size: 100px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+nav ul li{
+    list-style-type:none;
+    display: inline-block;
+    padding:10px   40px;
+}
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform:capitalize;
+    font-size: 60px;
+    white-space: 2rem;
+}
+nav ul li a:hover{
+    color:#f9004d;
+    transition: .3s;
+}
+.btn{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px  25px;
+    border-radius: 30px;
+}
+.btn:hover{
+    transform: scale(1.2);
+}
+.content{
+    position:absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-30%);
+    
+}
+h1{
+    color:white;
+    margin:20px  0px  20px ;
+    font-size: 150px;
+}
+h3{
+    color:#ff004c ;
+    font-size: 60px;
+    margin-bottom: 50px;
+    padding-left: 0%;
+    font-weight: bolder;
+    stroke-width: 100px;
+    stroke: aliceblue;
+}
+h4{
+    color: #f9004d;
+    letter-spacing: 2px;
+    font-size: 100px;
+}
+.newslatter form{
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+.newslatter form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px  130px  14px  15px;
+    border: 2px  solid #f9004d;
+    outline: none;
+    border-radius: 300px;
+}
+.newslatter form input:last-child{
+    position:absolute ;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px  30px ;
+    border-radius: 30px;
+    background-color: #f9004d;
+    color: white;
+    top: 6px;
+    right: 6px;
+}
+.newslatter form input:last-child:hover{
+    color:black;
+    transition: .4s;
+}
+.about-text{
+    width: 550px;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+body{
+    animation:transitionIn 0.75s;
+}
+@keyframes transitionIn{
+    from{
+        opacity: 0;
+        transform: rotatey(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: rotatey(0);
+    }
+}
+
+.image {
+  width: 1920px;
+  height: 1080px;
+  border-radius: 50%;
+  display: block;
+
+}
+
+.hero {
+    position: relative;
+}
+
+.profile-image {
+    position: relative;
+    top: 100%; /* Align the image vertically */
+    left: 2200px; /* Position the image on the right */
+    transform: translateY(-40%);
+}
+
+.profile-image img {
+    width: 1050px; /* Adjust the size */
+    height: 1050px; /* Keep it the same as width for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    border: 5px solid #5c003d; /* Optional: add a white border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a shadow */
+    
+}
+
+/* Typewriter animation */
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.content h1 {
+    font-family: 'Josefin Sans', sans-serif; /* Make sure your font is set */
+    overflow: hidden;              /* Ensures the text is hidden during typing */
+    border-right: 3px solid;       /* Adds the blinking cursor effect */
+    white-space: nowrap;           /* Prevents text from wrapping onto new lines */
+    width: 0;                      /* Initial width to start the animation */
+    animation: typewriter 4s steps(20) 1s forwards, blink 0.75s step-end infinite; /* Animation settings */
+}
