@@ -37,12 +37,7 @@
 .text-content h1{
     color:white;
     margin:20px  0px  20px ;
-    font-size: 80px;
-    overflow: hidden;
-    border-right: 3px solid;
-    white-space: nowrap;
-    margin-right: auto;
-    width: auto;
+    font-size: 150px;
 }
 .text-content h3{
     color:#ff004c ;
@@ -224,15 +219,15 @@ body{
 /* Responsive Design */
 @media screen and (max-width: 1200px){
     .text-content h1 {
-        font-size: 60px;
+        font-size: 120px;
     }
 
     .text-content h3 {
-        font-size: 30px;
+        font-size: 48px;
     }
 
     .text-content h4 {
-        font-size: 20px;
+        font-size: 80px;
     }
 }
 
@@ -249,7 +244,15 @@ body{
     }
 
     .text-content h1 {
-        font-size: 48px;
+        font-size: 90px;
+    }
+
+    .text-content h3 {
+        font-size: 36px;
+    }
+
+    .text-content h4 {
+        font-size: 60px;
     }
 
     .profile-image {
@@ -265,7 +268,7 @@ body{
 
 @media screen and (max-width: 768px){
     .text-content h1 {
-        font-size: 36px;
+        font-size: 60px;
     }
 
     .text-content h3 {
@@ -273,7 +276,7 @@ body{
     }
 
     .text-content h4 {
-        font-size: 18px;
+        font-size: 40px;
     }
 
     .profile-image {
