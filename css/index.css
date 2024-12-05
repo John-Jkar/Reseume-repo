@@ -37,7 +37,12 @@
 .text-content h1{
     color:white;
     margin:20px  0px  20px ;
-    font-size: 150px;
+    font-size: 80px;
+    overflow: hidden;
+    border-right: 3px solid;
+    white-space: nowrap;
+    margin-right: auto;
+    width: auto;
 }
 .text-content h3{
     color:#ff004c ;
@@ -52,6 +57,11 @@
     color: #f9004d;
     letter-spacing: 2px;
     font-size: 100px;
+}
+
+.text-content h1 span {
+    display: inline-block;
+    animation: typewriter 4s steps(20) 1s forwards;
 }
 
 /* Profile Section */
@@ -71,6 +81,8 @@
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     animation: morphing 10s ease-in-out infinite;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
 }
 
 .profile-photo{
@@ -80,6 +92,8 @@
     object-position: center 20%;
     transition: transform 0.3s ease;
     opacity: 1;
+    display: block;
+    z-index: 2;
 }
 
 .profile-image:hover .profile-photo{
@@ -94,7 +108,7 @@
     bottom: 0;
     background: linear-gradient(
         45deg, 
-        rgba(249, 0, 77, 0.1), 
+        rgba(249, 0, 77, 0.05), 
         transparent 70%
     );
     pointer-events: none;
