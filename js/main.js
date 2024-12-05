@@ -23,21 +23,45 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Existing form handling code
-    const contactForm = document.querySelector('.contact-form');
+    // Enhanced form handling
+    const contactForm = document.querySelector('#contactForm');
+    const successMessage = document.querySelector('#successMessage');
+    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const submitBtn = this.querySelector('button[type="submit"]');
-            submitBtn.classList.add('loading');
+            const buttonText = submitBtn.querySelector('.button-text');
+            const originalText = buttonText.textContent;
             
+            // Show loading state
+            submitBtn.disabled = true;
+            buttonText.textContent = 'Sending...';
+            
+            // Simulate form submission (replace with actual form submission)
             setTimeout(() => {
-                submitBtn.classList.remove('loading');
-                alert('Message sent successfully!');
+                submitBtn.disabled = false;
+                buttonText.textContent = originalText;
+                successMessage.classList.add('active');
                 contactForm.reset();
             }, 2000);
         });
     }
+
+    // Handle success message close button
+    const closeMessageBtn = document.querySelector('.close-message');
+    if (closeMessageBtn) {
+        closeMessageBtn.addEventListener('click', function() {
+            successMessage.classList.remove('active');
+        });
+    }
+
+    // Close success message when clicking outside
+    successMessage?.addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.classList.remove('active');
+        }
+    });
 
     // Add page transition animation
     document.body.classList.add('page-loaded');
