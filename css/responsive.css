@@ -1,0 +1,156 @@
+/* Base styles for mobile first approach */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 5%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.nav-menu {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.3s ease-in-out;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.nav-menu.active {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.content {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.content h1 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.content h3 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.profile-image img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        width: auto;
+        justify-content: flex-end;
+        gap: 20px;
+        background: none;
+        box-shadow: none;
+    }
+
+    .nav-menu a {
+        position: relative;
+    }
+
+    .nav-menu a::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #f9004d;
+        transition: width 0.3s ease;
+    }
+
+    .nav-menu a:hover::after {
+        width: 100%;
+    }
+
+    .content h1 {
+        font-size: 48px;
+    }
+
+    .content h3 {
+        font-size: 24px;
+    }
+
+    .profile-image img {
+        max-width: 300px;
+    }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+    .hero {
+        padding: 30px 10%;
+    }
+
+    .content h1 {
+        font-size: 60px;
+    }
+
+    .content h3 {
+        font-size: 28px;
+    }
+
+    .profile-image img {
+        max-width: 350px;
+    }
+} 

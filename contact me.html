@@ -1,35 +1,70 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>A portfolio Website</title>
-        <link rel="stylesheet" type="text/css" href="css/contact me.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="hero">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="About me.html">About me</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact me.html">Contact me</a></li>
-                </ul>
-            </nav>
-            <div class="contact-me">
-                <p>Let Me Get You A beatiful Website and Solve your Networking Problem as quick as possible  at  affordable prices. </p>
-                <a class="button-two" href="#">Hire Me</a>
-            </div>
-            <footer>
-                <p>Kagimu John Jonan</p>
-                <p>For more information </p>
-                <div class="social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <h2 class="logo">My Port<span>folio</span></h2>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About me.html">About me</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact me.html">Contact me</a></li>
+            </ul>
+        </nav>
+
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>email@example.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1234567890</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Your Location</p>
+                    </div>
                 </div>
-                <p class="end">CopyRight By Kagimu John Jonan</p>
-            </footer>
-        </div>    
-    </body>
-    </html>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

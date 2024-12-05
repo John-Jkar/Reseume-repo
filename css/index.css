@@ -182,5 +182,91 @@ body{
     border-right: 3px solid;       /* Adds the blinking cursor effect */
     white-space: nowrap;           /* Prevents text from wrapping onto new lines */
     width: 0;                      /* Initial width to start the animation */
-    animation: typewriter 4s steps(20) 1s forwards, blink 0.75s step-end infinite; /* Animation settings */
+    animation: typewriter 4s steps(20) 1s forwards, blink 0.75s step-end infinite; 
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Page transition animation */
+body {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+body.page-loaded {
+    opacity: 1;
+}
+
+/* Improve button styles across all pages */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Improve image loading */
+img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* Add subtle hover effects to cards and interactive elements */
+.service-card,
+.profile-image,
+.about-text {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.profile-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Improve form accessibility */
+input:focus,
+textarea:focus,
+button:focus {
+    outline: 2px solid #f9004d;
+    outline-offset: 2px;
+}
+
+/* Add skip to main content link for accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #f9004d;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
 }
